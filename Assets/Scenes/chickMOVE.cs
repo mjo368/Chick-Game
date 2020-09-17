@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChickMOVE : MonoBehaviour
+public class chickMOVE : MonoBehaviour
 {
      
     // Start is called before the first frame update

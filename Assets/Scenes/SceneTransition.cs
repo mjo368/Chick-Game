@@ -10,7 +10,7 @@ public class SceneTransition : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("chick2") && !other.isTrigger)
+            if(other.gameObject.name == "chick2" && !other.isTrigger)
             {
 
                 SceneManager.LoadScene(sceneToLoad);
