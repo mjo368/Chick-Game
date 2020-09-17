@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class Convo2 : MonoBehaviour
 {
-     public GameObject dialogBox; 
+    public GameObject dialogBox; 
     public Text dialogText; 
     public string dialog; 
     public bool chick2InRange; 
+    //public GameObject Player; 
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class Convo2 : MonoBehaviour
         
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("chick2"))
+        if(other.gameObject.name == "chick2")
         {
             chick2InRange = true; 
         }
@@ -44,7 +45,7 @@ public class Convo2 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("chick2"))
+        if(other.gameObject.name == "chick2")
         {
             chick2InRange = false; 
             dialogBox.SetActive(false); 
