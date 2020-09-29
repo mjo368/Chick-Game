@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class chickMOVE : MonoBehaviour
 {
+     public GameObject player;
      
     // Start is called before the first frame update
     void Start()
@@ -36,16 +37,36 @@ public class chickMOVE : MonoBehaviour
         
         } else if (Input.GetKey(KeyCode.UpArrow))
         {
-            GetComponent<Transform>().Translate(new Vector3(0, 1, 0) * 0.05f ); 
+            GetComponent<Transform>().Translate(new Vector3(0, 3, 0) * 0.05f ); 
              GetComponent<Animator>().Play("jump");
         } else 
         {
              GetComponent<Animator>().Play("idle");
 
         }
+/*
+
+          if(other.gameObject.CompareTag("Platform") && playerCtrl.isJumping)
+          {
+
+               playerCtrl.isJumping = false; 
+               player.transform.parent = other.gameObject.transform; 
 
 
-       
+          }
+     
+     
+      //private void OnTriggerExit2D(Collider2D other)
+      
+          if (Input.GetKey(KeyCode.UpArrow))
+          {
+          player.transform.parent = null; 
 
+
+           }
+*/
+      
     }
-}
+
+     }
+
